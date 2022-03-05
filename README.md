@@ -7,7 +7,7 @@ We will also use module styles to animate a part of the sentence.
 Let's Doooo it.
 
 
-## Vss modules
+## Css modules
 
 it is a way to compile the JavaScript code of an application by importing the CSS styles in the same way as a JavaScript module. It's the bundler (Webpack, Rollup etc.) that does the work when compiling.
 
