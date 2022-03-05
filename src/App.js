@@ -1,5 +1,5 @@
-import logo from './better_way.svg';
-import './App.css';
+import logo from '../src/assets/images/better_way.svg'; // relative path ?
+import '../src/assets/css/App.css';
 
 function App() {
   return (
