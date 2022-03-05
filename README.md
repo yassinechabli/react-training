@@ -1,7 +1,7 @@
 
 # Let's create my first react component ever
 
-In the part , we will create a dump component which allow us to show a huge text contains My wonderfull name 
+In this part , we will create a dump component which allow us to show a huge text contains My wonderfull name 
 We will also use module styles to animate a part of the sentence.
 
 Let's Doooo it.
