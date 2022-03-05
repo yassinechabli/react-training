@@ -1,0 +1,16 @@
+.Hello {
+font-family: "Thinking of betty";
+    font-size: 40px;
+    line-height: 40px;
+}
+
+
+.Blink {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
