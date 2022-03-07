@@ -8,7 +8,5 @@ Type:
 
 ### Prettier
 
-
      npm run lint:format (if permission problem, preffix the command with sudo)
-
 
