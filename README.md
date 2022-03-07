@@ -1,12 +1,5 @@
-# Prettier & eslint
+# React router
 
-### Eslint
+### install router deps
 
-Type:
-
-     npm run lint:fix (if permission problem, preffix the command with sudo)
-
-### Prettier
-
-     npm run lint:format (if permission problem, preffix the command with sudo)
-
+    npm install --save react-router-dom
