@@ -1,15 +1,14 @@
 @font-face {
-  font-family: "Thinking of betty";
-  src: url("../fonts/Thinking_of_Betty.woff") format("woff");
+  font-family: 'Thinking of betty';
+  src: url('../fonts/Thinking_of_Betty.woff') format('woff');
 }
 
-*{
+* {
   color: #0e2357;
-
 }
-a:visited , a:focus{
+a:visited,
+a:focus {
   color: #0e2357;
-
 }
 .logo {
   width: 50px;
@@ -19,5 +18,5 @@ a:visited , a:focus{
   left: 20px;
 }
 code {
-  font-family:"Thinking of betty" ;
+  font-family: 'Thinking of betty';
 }
