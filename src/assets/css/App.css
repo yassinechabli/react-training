@@ -11,49 +11,13 @@ a:visited , a:focus{
   color: #0e2357;
 
 }
+.logo {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
 code {
   font-family:"Thinking of betty" ;
-
-}
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 20vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation:move 3s infinite ease-in-out;
-
-  }
-}
-
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  text-decoration: "none";
-  font-family:"Thinking of betty" ;
-}
-
-@keyframes move {
-  0% {
-    transform: scale(1,1);
-  }
-  50% {
-    transform: scale(1.2,1.2);
-  }
-  100% {
-    transform: scale(1,1);
-  }
 }

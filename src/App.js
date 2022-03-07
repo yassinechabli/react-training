@@ -1,16 +1,13 @@
-import logo from 'assets/images/better_way.svg';
 import 'assets/css/App.css';
-import Hello from "components/Hello/Hello";
+import Card from "components/wheather/Card";
+import logo from "assets/images/logo.jpeg";
+import {weekWeatherData} from "mocks/weather";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Hello fullName="chabli mohammed yassine"/>
-          <hr/>
-        <Hello fullName="chabli mohammed yassine" username="konnetrofast13"/>
-      </header>
+      <img src={logo} className="logo"/>
+    <Card weekWeather={weekWeatherData}/>
     </div>
   );
 }
