@@ -1,6 +1,8 @@
 import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
 import weatherState from 'state/weather/reducers';
 import MiddleWare from 'state/middleware';
+import thunk from 'redux-thunk';
+
 const rootReducer = combineReducers({
   weatherState
 });
@@ -10,7 +12,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
   : compose;
 
 function configureStore(preloadedState) {
-  const middleware = [MiddleWare];
+  const middleware = [MiddleWare, thunk];
   return createStore(rootReducer, preloadedState, composeEnhancers(applyMiddleware(...middleware)));
 }
 

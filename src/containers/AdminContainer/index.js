@@ -8,7 +8,7 @@ const AdminContainer = () => {
   const [temperature, setTemperature] = useState('15');
   const [atmosphere, setAtmosphere] = useState('Sunny');
 
-  const { add: addWeather } = useWeather({ consumer: false });
+  const { add: addWeather, isLoading, isLoaded } = useWeather();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -70,6 +70,18 @@ const AdminContainer = () => {
               >
                 Ajouter
               </button>
+
+              {isLoading && (
+                <div className="alert alert-secondary mt-5" role="alert">
+                  Ajout en cours
+                </div>
+              )}
+
+              {isLoaded && (
+                <div className="alert alert-primary mt-5" role="alert">
+                  Ajout réussi
+                </div>
+              )}
             </div>
           </div>
         </div>
