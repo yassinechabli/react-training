@@ -6,6 +6,8 @@
 
 - Hooks put-in
 
-      useState() 
+      useState() , useeffect
 
 - Passing Functions to Components as Props
+
+- Rendering

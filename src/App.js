@@ -1,13 +1,12 @@
 import 'assets/css/App.css';
-import Card from "components/wheather/Card";
 import logo from "assets/images/logo.jpeg";
-import {weekWeatherData} from "mocks/weather";
+import WeatherContainer from "components/containers/WeatherContainer";
 
 function App() {
   return (
     <div className="App">
       <img src={logo} className="logo"/>
-    <Card weekWeather={weekWeatherData}/>
+      <WeatherContainer />
     </div>
   );
 }

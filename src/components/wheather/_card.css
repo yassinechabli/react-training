@@ -125,7 +125,7 @@ p {
 }
 
 .card-weather .card-body {
-    background: #ffffff
+    background: #ffffff;
 }
 
 .card-weather .weakly-weather {
@@ -138,7 +138,9 @@ p {
     flex: 1;
     border-right: 1px solid #f2f2f2;
     padding: 1rem;
-    text-align: center
+    text-align: center;
+    cursor: pointer;
+
 }
 
 .mb-0,
