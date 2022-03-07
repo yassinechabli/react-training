@@ -1,12 +1,11 @@
 import WeatherCard from 'components/wheather/Card';
-import { useSelector } from 'react-redux';
-import { getWeatherSelector } from 'state/weather/selectors';
+import useWeather from 'hooks/weather/useWeather';
 
 const WeatherContainer = () => {
   const handleOnselectWeatherDate = (data) => {
     console.log('selected date weather', data);
   };
-  const data = useSelector(getWeatherSelector);
+  const { data } = useWeather();
   return (
     <>
       {data.length > 0 ? (

@@ -1,21 +1,18 @@
-import { ADD_WEATHER_DAY } from 'constants/actions';
 import { buildDayWeatherPayload } from 'containers/AdminContainer/utils';
+import useWeather from 'hooks/weather/useWeather';
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
 import { formatDate } from 'utils/dates';
 
 const AdminContainer = () => {
   const [date, setDate] = useState(formatDate(new Date()));
   const [temperature, setTemperature] = useState('15');
   const [atmosphere, setAtmosphere] = useState('Sunny');
-  const dispatch = useDispatch();
+
+  const { add: addWeather } = useWeather({ consumer: false });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch({
-      type: ADD_WEATHER_DAY,
-      payload: buildDayWeatherPayload({ date, temperature, atmosphere })
-    });
+    addWeather(buildDayWeatherPayload({ date, temperature, atmosphere }));
   };
   return (
     <>
