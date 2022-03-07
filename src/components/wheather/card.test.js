@@ -1,10 +1,17 @@
 import Card from 'components/wheather/Card';
-import { weekWeatherData } from 'mocks/weather';
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { getWeekDates } from 'utils/dates';
+
+const mockData = getWeekDates().map((date) => ({
+  ...date.dayName,
+  date: '12/12/2012',
+  temperature: 15,
+  atmosphere: 'Sunny'
+}));
 
 it('renders correctly when data is given', () => {
-  const tree = renderer.create(<Card weekWeather={weekWeatherData} />).toJSON();
+  const tree = renderer.create(<Card weekWeather={mockData} />).toJSON();
   expect(tree).toMatchSnapshot();
 });
 
