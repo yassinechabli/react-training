@@ -34,10 +34,10 @@ const Card = ({ weekWeather, onSelectDateWeather }) => {
               </div>
               <div className="card-body p-0">
                 <div className="d-flex weakly-weather">
-                  {weekWeather.map((data) => (
+                  {weekWeather.map((data, index) => (
                     <div
                       className="weakly-weather-item"
-                      key={data.dayName}
+                      key={`${data.dayName}-${index}`}
                       onClick={() => {
                         handleOnchangeCurrentDate(data);
                       }}
@@ -62,7 +62,7 @@ Card.propTypes = {
     PropTypes.shape({
       dayName: PropTypes.string.isRequired,
       date: PropTypes.string.isRequired,
-      temperature: PropTypes.number.isRequired
+      temperature: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired
     })
   ),
   onSelectDateWeather: PropTypes.func

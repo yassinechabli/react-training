@@ -1,0 +1,1 @@
+export const ADD_WEATHER_DAY = 'ADD_WEATHER_DAY';

@@ -1,4 +1,4 @@
-import WeatherContainer from 'components/containers/WeatherContainer';
+import WeatherContainer from 'containers/WeatherContainer';
 
 const WeatherPage = () => {
   return (
