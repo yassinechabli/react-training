@@ -31,6 +31,7 @@ const AdminContainer = () => {
                   className="form-control"
                   placeholder="date"
                   aria-label="date"
+                  role="date"
                 />
               </div>
 
@@ -45,11 +46,13 @@ const AdminContainer = () => {
                   className="form-control"
                   placeholder="temperature"
                   aria-label="temperature"
+                  role="temperature"
                 />
               </div>
 
               <div className="input-group mb-3">
                 <select
+                  role="atmosphere"
                   className="form-select"
                   aria-label="atmosphere"
                   value={atmosphere}
@@ -64,6 +67,7 @@ const AdminContainer = () => {
                 </select>
               </div>
               <button
+                role="submit"
                 type="submit"
                 className="btn btn-info"
                 disabled={!date || !atmosphere || !temperature}
