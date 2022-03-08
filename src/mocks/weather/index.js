@@ -7,5 +7,3 @@ export const weekWeatherData = getWeekDates().map((day) => ({
   temperature: Math.floor(Math.random() * 20) + 15,
   atmosphere: atmosphere[Math.floor(Math.random() * 3) + 1]
 }));
-
-

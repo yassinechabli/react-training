@@ -1,4 +1,4 @@
-import { ADD_WEATHER_DAY } from 'constants/actions';
+import { ADD_WEATHER_DAY, LOAD_WEATHERS } from 'constants/actions';
 import { getActionTypes } from 'utils/actions';
 
 export const addWeather = (data) => (dispatch) => {
@@ -11,4 +11,17 @@ export const addWeather = (data) => (dispatch) => {
       dispatch({ type: actions.success, payload: data });
     }, 3000);
   });
+};
+
+export const loadWeather = () => (dispatch) => {
+  const actions = getActionTypes(LOAD_WEATHERS);
+  dispatch({ type: actions.begin });
+  return fetch('http://localhost:8080/weathers')
+    .then((res) => res.json())
+    .then((res) => {
+      dispatch({ type: actions.success, payload: res });
+    })
+    .catch((e) => {
+      dispatch({ type: actions.error, payload: e });
+    });
 };

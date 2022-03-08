@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { getWeatherSelector as selector } from 'state/weather/selectors';
-import { addWeather } from 'state/weather/actions';
+import { addWeather, loadWeather } from 'state/weather/actions';
 
 const EMPTY_ARRAY = [];
 const useWeather = ({ consumer = true } = {}) => {
@@ -8,7 +8,8 @@ const useWeather = ({ consumer = true } = {}) => {
   const { data, isLoading, isLoaded } = consumer ? useSelector(selector) : EMPTY_ARRAY;
 
   const add = (payload) => dispatch(addWeather(payload));
-
-  return { add, data, isLoading, isLoaded };
+  const load = () => dispatch(loadWeather());
+  return { add, load, data, isLoading, isLoaded };
 };
+
 export default useWeather;

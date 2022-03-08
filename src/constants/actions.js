@@ -1,1 +1,2 @@
 export const ADD_WEATHER_DAY = 'ADD_WEATHER_DAY';
+export const LOAD_WEATHERS = 'LOAD_WEATHERS';

@@ -1,11 +1,20 @@
 import WeatherCard from 'components/wheather/Card';
 import useWeather from 'hooks/weather/useWeather';
+import { useEffect } from 'react';
 
 const WeatherContainer = () => {
   const handleOnselectWeatherDate = (data) => {
     console.log('selected date weather', data);
   };
-  const { data } = useWeather();
+  const { data, load } = useWeather();
+
+  useEffect(() => {
+    load();
+    console.log('useffect');
+  }, []);
+
+  console.log('renders');
+
   return (
     <>
       {data.length > 0 ? (

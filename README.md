@@ -1,7 +1,25 @@
-# Testing library
+# Hooks suite
 
 
-### unit testing
+### useEffect
+
+The useEffect Hook allows you to perform side effects in your components.
+
+Some examples of side effects are: fetching data, directly updating the DOM, and timers.
+
+useEffect accepts two arguments. The second argument is optional.
+
+    useEffect(<function>, <dependency>)
 
 
-Remember that unit testing forces a wrappers such as providers to unit test containers, and other logic in your react app.
+
+
+### msw  (mock server worker)
+
+
+    npm i msw --save-dev
+
+ Integration 
+
+     npx msw init <PUBLIC_DIR> --save
+
