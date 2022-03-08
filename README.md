@@ -1,14 +1,7 @@
 # Testing library
 
 
-
-### execute snapshot tests
-
-    npm run test 
-### update snapshot test
-
-    npm run test -- -u
+### unit testing
 
 
-
-Note: you test file should have at least one test , if not , tests will fail.
+Remember that unit testing forces a wrappers such as providers to unit test containers, and other logic in your react app.
