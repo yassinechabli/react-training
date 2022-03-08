@@ -1,24 +1,29 @@
-import WeatherCard from 'components/wheather/Card';
+import View from 'containers/WeatherContainer/view';
 import useWeather from 'hooks/weather/useWeather';
+import { useCallback, useState } from 'react';
 
 const WeatherContainer = () => {
-  const handleOnselectWeatherDate = (data) => {
+  const [count, setCount] = useState(0);
+
+  const handleButtonClick = useCallback(() => {
+    setCount(count + 1);
+  }, []);
+
+  const handleOnselectWeatherDay = (data) => {
     console.log('selected date weather', data);
   };
+  console.log('render controller weather');
   const { data } = useWeather({ lazy: false, resetOnUnmount: true });
   return (
     <>
-      {data.length > 0 ? (
-        <WeatherCard weekWeather={data} onSelectDateWeather={handleOnselectWeatherDate} />
-      ) : (
-        <div className="container mt-5">
-          <div className="row  align-items-center">
-            <div className="col">
-              <p> pas de données disponibles</p>
-            </div>
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <button onClick={handleButtonClick}>send analytics</button>
           </div>
         </div>
-      )}
+      </div>
+      <View data={data} onselectWeatherDay={handleOnselectWeatherDay} />
     </>
   );
 };

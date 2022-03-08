@@ -1,25 +1,22 @@
 # Hooks suite
 
 
-### useEffect
+### useCallback 
 
-The useEffect Hook allows you to perform side effects in your components.
+This allows us to isolate resource intensive functions so that they will not automatically run on every render.
 
-Some examples of side effects are: fetching data, directly updating the DOM, and timers.
+The useCallback Hook only runs when one of its dependencies update.
 
-useEffect accepts two arguments. The second argument is optional.
+This can improve performance.
 
-    useEffect(<function>, <dependency>)
-
-
+The useCallback and useMemo Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function. You can learn more about useMemo in the useMemo chapter.
 
 
-### msw  (mock server worker)
+    useCallback(()=>{}, [deps])
 
 
-    npm i msw --save-dev
 
- Integration 
 
-     npx msw init <PUBLIC_DIR> --save
+### Model View Controller Pattern for React
+
 
