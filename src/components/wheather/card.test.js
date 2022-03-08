@@ -3,8 +3,8 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { getWeekDates } from 'utils/dates';
 
-const mockData = getWeekDates().map((date) => ({
-  ...date.dayName,
+const mockData = getWeekDates().map(({ dayName }) => ({
+  dayName,
   date: '12/12/2012',
   temperature: 15,
   atmosphere: 'Sunny'
