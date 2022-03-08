@@ -24,7 +24,8 @@ export default function (state = initialState, action) {
       return { ...state, isLoading: false, isLoaded: true, data: action.payload };
     case loadActions.error:
       return { ...state, isLoading: false, isLoaded: true, error: action.payload };
-
+    case loadActions.reset:
+      return initialState;
     default:
       return state;
   }

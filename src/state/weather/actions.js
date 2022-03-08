@@ -25,3 +25,8 @@ export const loadWeather = () => (dispatch) => {
       dispatch({ type: actions.error, payload: e });
     });
 };
+
+export const resetWeathers = () => (dispatch) => {
+  const actions = getActionTypes(LOAD_WEATHERS);
+  dispatch({ type: actions.reset });
+};
