@@ -1,3 +1,4 @@
+import ErrorBoundary from 'ErrorBoundary';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'assets/css/index.css';
@@ -9,11 +10,13 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <Router>
-        <App />
-      </Router>
-    </Provider>
+    <ErrorBoundary>
+      <Provider store={store}>
+        <Router>
+          <App />
+        </Router>
+      </Provider>
+    </ErrorBoundary>
   </React.StrictMode>,
   document.getElementById('root')
 );

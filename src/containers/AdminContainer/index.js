@@ -1,4 +1,3 @@
-import { buildDayWeatherPayload } from 'containers/AdminContainer/utils';
 import useWeather from 'hooks/weather/useWeather';
 import { useState } from 'react';
 import { formatDate } from 'utils/dates';
@@ -8,11 +7,17 @@ const AdminContainer = () => {
   const [temperature, setTemperature] = useState('15');
   const [atmosphere, setAtmosphere] = useState('Sunny');
 
-  const { add: addWeather, isLoading, isLoaded } = useWeather();
+  const [error, setError] = useState(false);
+
+  if (error) throw new Error('News error!');
+
+  const { isLoading, isLoaded } = useWeather();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addWeather(buildDayWeatherPayload({ date, temperature, atmosphere }));
+    setError(true);
+
+    //addWeather(buildDayWeatherPayload({ date, temperature, atmosphere }));
   };
   return (
     <>
